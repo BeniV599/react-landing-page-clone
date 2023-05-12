@@ -1,23 +1,39 @@
-import './App.css';
-import logo from './logo.svg';
+import styles from './App.module.scss';
+import { ReactComponent as Logo } from './logo.svg';
 
 export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <nav className={`${styles.container} ${styles.navBar}`}>
+          <div>
+            <Logo />
+          </div>
+          <ul>
+            <li>
+              <a href="/#">Modern BI</a>
+            </li>
+            <li>
+              <a href="/#">Why Mode</a>
+            </li>
+            <li>
+              <a href="/#">Customer Stories</a>
+            </li>
+            <li>
+              <a href="/#">Compare Plans</a>
+            </li>
+            <li>
+              <a href="/#">Resources</a>
+            </li>
+          </ul>
+          <div>
+            <a href="/#">Sign in</a>
+            <a href="/#">Try for free</a>
+          </div>
+        </nav>
       </header>
-    </div>
+      <main>My dish div soup, oop!</main>
+      <footer>My leg! My leeeeg.</footer>
+    </>
   );
 }
